@@ -21,18 +21,23 @@ public class TheNameGame {
         String x = name;
         String y = name.substring(1);
         String b = "b";
+        String m = "m";
+        String f = "f";
 
-        char letter = name.charAt(0);
-        if ("aeiou".indexOf(name.toLowerCase().charAt(0)) > -1) {
+        char letter = name.toLowerCase().charAt(0);
+        if ("aeiou".indexOf(letter) > -1) {
             y = name.toLowerCase();
-        } else if (letter == 'b') ;
-        {
+        } else if (letter == 'm') {
+            m = "";
+        } else if (letter == 'f') {
+            f = "";
+        } else if (letter == 'b') {
             b = "";
         }
 
-        String song = x + sep + x + sep + "bo-b" + y + "\n";
-        song = song + "Banana-fana fo-f" + y + "\n";
-        song = song + "Fee-fi-mo-m" + y + "\n";
+        String song = x + sep + x + sep + "bo-" +b + y + "\n";
+        song = song + "Banana-fana fo-"+f + y + "\n";
+        song = song + "Fee-fi-mo-" +m + y  + "\n";
         song = song + name + "!\n";
         return song;
     }
